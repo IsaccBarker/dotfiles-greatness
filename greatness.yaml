@@ -1,0 +1,37 @@
+---
+packages: ~
+files:
+  - path: "{{HOME}}/.config/alacritty/alacritty.yml"
+    tag: ""
+    scripts: ~
+  - path: "{{HOME}}/.config/starship.toml"
+    tag: ""
+    scripts: ~
+  - path: "{{HOME}}/.tmux.conf"
+    tag: ""
+    scripts: ~
+  - path: "{{HOME}}/Developer/dotfiles/.tmuxinator/default.yml"
+    tag: ""
+    scripts: ~
+  - path: "{{HOME}}/.zshrc"
+    tag: shell
+    scripts: ~
+  - path: "{{HOME}}/.zshenv"
+    tag: shell
+    scripts: ~
+  - path: "{{HOME}}/.bash_profile"
+    tag: shell
+    scripts: ~
+  - path: "{{HOME}}/.bash_logout"
+    tag: shell
+    scripts: ~
+  - path: "{{HOME}}/.bashrc"
+    tag: shell
+    scripts: ~
+  - path: "{{HOME}}/.config/nvim/init.vim"
+    tag: nvim
+    scripts: ~
+  - path: "{{HOME}}/.config/nvim/coc-settings.json"
+    tag: nvim
+    scripts: ~
+requires: ~
