@@ -130,15 +130,21 @@ strftime -rs midnight %F $today
 since_midnight=$((now - midnight))
 
 # Neofetch!
-neofetch --ascii_distro `fortune neofetch-os` --disable terminal --disable packages --disable host --disable --disable uptime --disable shell --disable resolution --disable de --disable wm --disable "wm theme"   --disable theme --disable icons
+if [[ "$OSTYPE" != *darwin* ]]; then
+    neofetch --ascii_distro `fortune neofetch-os` --disable terminal --disable packages --disable host --disable --disable uptime --disable shell --disable resolution --disable de --disable wm --disable "wm theme"   --disable theme --disable icons
+else
+    neofetch --disable terminal --disable packages --disable host --disable --disable uptime --disable shell --disable resolution --disable de --disable wm --disable "wm theme" --disable theme --disable icons
+fi
 
 echo
 
-# Quotes
-if [ "$since_midnight" -ge "75600" ]; then
-    cowsay -f $(get_cowfile) $(fortune -a -s -o) # No one is looking, make offensive jokes
-else
-    cowsay -f $(get_cowfile) $(fortune -a -s) # People might be looking
+if [[ "$OSTYPE" != *darwin* ]]; then
+    # Quotes
+    if [ "$since_midnight" -ge "75600" ]; then
+        cowsay -f $(get_cowfile) $(fortune -a -s -o) # No one is looking, make offensive jokes
+    else
+        cowsay -f $(get_cowfile) $(fortune -a -s) # People might be looking
+    fi
 fi
 
 echo

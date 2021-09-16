@@ -46,8 +46,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 10
-    y: 10
+    x: 0
+    y: 0
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -75,7 +75,7 @@ window:
   startup_mode: Maximized
 
   # Window title
-  title: Terminal
+  title: Egg-salent Terminal
 
   # Allow terminal applications to change Alacritty's window title.
   dynamic_title: true
